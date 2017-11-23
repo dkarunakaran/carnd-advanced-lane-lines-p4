@@ -47,7 +47,7 @@ if ret == True:
 ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
 ```
 
-Images of the chessboard
+<img src="output_images/camera_calib_undistort.png" />
 
 #### Distortion-correction
 
@@ -57,7 +57,8 @@ mtx, dist parameters from calibration image is used to undistort the image using
 def undistort_image(img, mtx, dist):
     return cv2.undistort(img, mtx, dist, None, mtx)
 ```
-Image of the undistort
+
+<img src="output_images/udistort_image.png" />
 
 #### Color transforms, gradients or other methods to create a thresholded binary image
 I have used various combination of color and gradient thresholds to generate a binary image where the lane lines are clearly visible.. I have used gradient on x and y direction, manginutude of the gradient, direction of the gradient, and color transformation technique to get the final binary image.
@@ -158,7 +159,7 @@ def combined_s_gradient_thresholds(img, show=False):
     return combined_binary
 ```
 
-Image
+<img src="output_images/gradient_color_threshold.png" />
 
 #### Perspective transform
 
@@ -191,7 +192,7 @@ def transform_image(img, nx, ny):
     return warped, M
 ```
 
-Image
+<img src="output_images/transform_image.png" />
 
 #### Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
@@ -281,7 +282,7 @@ def locate_lines(binary_warped, nwindows = 9, margin = 100, minpix = 50):
 
 ```
 
-Image
+<img src="output_images/poly_fit.png" />
 
 #### Radius of curvature of the lane and the position of the vehicle with respect to center.
 
@@ -323,11 +324,13 @@ def radius_curvature(binary_warped, left_fit, right_fit):
 
 #### Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-Final image
+<img src="output_images/final_image.png" />
 
 #### Pipeline (video)
 
-Final video
+<video width="320" height="240" controls>
+  <source src="output_video/project_video.mp4" type="video/mp4">
+</video>
 
 #### Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
