@@ -294,7 +294,7 @@ We say the curve and the circle osculate (which means "to kiss"), since the 2 cu
 
 The radius of curvature of the curve at a particular point is defined as the radius of the approximating circle. This radius changes as we move along the curve.
 
-<img src="radius_cur.png" />
+<img src="output_images/radius_cur.png" />
 
 ```
 def radius_curvature(binary_warped, left_fit, right_fit):
