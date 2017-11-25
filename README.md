@@ -294,6 +294,8 @@ We say the curve and the circle osculate (which means "to kiss"), since the 2 cu
 
 The radius of curvature of the curve at a particular point is defined as the radius of the approximating circle. This radius changes as we move along the curve.
 
+The radius of curvature at any point x of the function x=f(y) is given as follows:
+
 <img src="output_images/radius_cur.png" />
 
 ```
