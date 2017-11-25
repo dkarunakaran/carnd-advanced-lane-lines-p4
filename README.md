@@ -340,7 +340,7 @@ def radius_curvature(binary_warped, left_fit, right_fit):
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=u2nZnwt6Awo
 " target="_blank"><img src="http://img.youtube.com/vi/u2nZnwt6Awo/0.jpg" 
-alt="Pipeline video" width="240" height="180" border="10" /></a>
+alt="Pipeline video" width="640" height="420" border="10" /></a>
 
 
 #### Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
